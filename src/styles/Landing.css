@@ -1,0 +1,55 @@
+.landing-banner {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #001f3f, #007bff);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .landing-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .landing-banner p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+  
+  .landing-banner span {
+    color: #ffc107;
+  }
+  
+  .landing-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .landing-btn:hover {
+    background-color: #e6e6e6;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .landing-banner > * {
+    animation: fadeInUp 1s ease-out;
+  }
+  
