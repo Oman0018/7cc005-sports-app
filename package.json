@@ -7,13 +7,14 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "bootstrap": "^5.3.3",
     "firebase": "^11.4.0",
     "react": "^19.0.0",
+    "react-data-table-component": "^7.7.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.3.0",
+    "react-router-dom": "^7.5.3",
     "react-scripts": "^5.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "web-vitals": "^4.2.4",
@@ -45,8 +46,11 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "jest": "^27.5.1",
     "nodemon": "^3.1.9",
-    "supertest": "^7.1.0"
+    "postcss": "^8.5.3",
+    "supertest": "^7.1.0",
+    "tailwindcss": "^4.1.5"
   }
 }

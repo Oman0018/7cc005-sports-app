@@ -7,6 +7,7 @@ import Matches from '../pages/Matches';
 import Favorites from '../pages/Favorites';
 import PlayerStats from '../pages/PlayerStats';
 import TeamStats from '../pages/TeamStats';
+import LiveMatches from '../components/LiveMatches';
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
       <Route path="/favorites" element={<Favorites />} />
       <Route path="/player-stats" element={<PlayerStats />} />
       <Route path="/team-stats" element={<TeamStats />} />
+      <Route path="/LiveMatches" element={<LiveMatches />} />
     </Routes>
   );
 };

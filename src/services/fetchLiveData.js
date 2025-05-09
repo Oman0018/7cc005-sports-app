@@ -8,6 +8,8 @@ export const fetchFootballMatches = async () => {
       `https://api.sportmonks.com/v3/football/fixtures?api_token=${API_TOKEN}&include=home_team;away_team;scores&filters[status]=live`
     );
 
+    console.log(response)
+
     if (!response.ok) {
       throw new Error(`API Error: ${response.status}`);
     }

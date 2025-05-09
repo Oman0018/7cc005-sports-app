@@ -9,7 +9,7 @@ function PlayerStats() {
     useEffect(() => {
         axios.get('http://localhost:5000/api/players/stats')
             .then(response => {
-                console.log('✅ Fetched player stats:', response.data); // DEBUG
+                console.log('✅ Fetched playerstats:', response.data); // DEBUG
                 setPlayers(response.data);
                 setLoading(false);
             })

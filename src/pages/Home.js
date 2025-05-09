@@ -1,22 +1,28 @@
-import React from 'react';
-import '../styles/Home.css'; // Correct relative path
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import MatchCard from './MatchCard'; // Ensure path is correct
 
 const Home = () => {
+  const [matches, setMatches] = useState([]);
+
+  useEffect(() => {
+    const fetchMatches = async () => {
+      try {
+        const res = await axios.get('http://localhost:5000/api/matches');
+        setMatches(res.data);
+      } catch (err) {
+        console.error('Error fetching matches:', err);
+      }
+    };
+    fetchMatches();
+  }, []);
+
   return (
-    <div>
-      <div className="hero-banner">
-        <div className="hero-banner-text">Sports Stats Hub</div>
-      </div>
-      <div className="p-4">
-        <p>Your one-stop destination for comprehensive sports statistics and analysis.</p>
-        <p><strong>Features:</strong></p>
-        <ul>
-          <li>📊 Detailed player statistics</li>
-          <li>📅 Upcoming match schedules</li>
-          <li>⚽ Live match updates</li>
-          <li>⭐ Favorites to track your favorite players and teams</li>
-        </ul>
-      </div>
+    <div style={{ padding: '30px', maxWidth: '800px', margin: 'auto' }}>
+      <h2>Match Results</h2>
+      {matches.map(match => (
+        <MatchCard key={match.id} match={match} />
+      ))}
     </div>
   );
 };

@@ -3,10 +3,11 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const matchRoutes = require('./routes/matchRoutes');     // ✅ Matches
-const teamRoutes = require('./routes/teamRoutes');       // ✅ Teams
-const userRoutes = require('./routes/userRoutes');       // ✅ Users
-const playerRoutes = require('./routes/playerRoutes');   // ✅ Players
+const playerRoutes = require('./routes/playerRoutes');
+const matchRoutes = require('./routes/matchRoutes');
+const teamRoutes = require('./routes/teamRoutes');
+const userRoutes = require('./routes/userRoutes');
+const liveMatchesRoutes = require('./routes/liveMatchesRoutes'); // ✅ NEW
 
 const errorMiddleware = require('./middlewares/errorMiddleware');
 
@@ -21,6 +22,7 @@ app.use('/api/matches', matchRoutes);
 app.use('/api/teams', teamRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/players', playerRoutes);
+app.use('/api/liveMatches', liveMatchesRoutes);  // ✅ NEW
 
 // ✅ Global error handler
 app.use(errorMiddleware);

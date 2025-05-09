@@ -12,7 +12,7 @@ const Header = () => {
         <FaChartBar className="logo-icon" />
         <span>Sports Stats Hub</span>
       </div>
-      <nav className="nav-links">
+      {/* <nav className="nav-links">
         <NavLink to="/" end>
           <FaHome /> <span>Home</span>
         </NavLink>
@@ -22,13 +22,19 @@ const Header = () => {
         <NavLink to="/matches">
           <FaCalendarAlt /> <span>Matches</span>
         </NavLink>
+        <NavLink to="/livematches">
+          <FaCalendarAlt /> <span>Live Matches</span>
+        </NavLink>
         <NavLink to="/favorites">
           <FaStar /> <span>Favorites</span>
         </NavLink>
-        <NavLink to="/player-stats">
-          <FaChartBar /> <span>Player Stats</span>
+        <NavLink to="/playerstats">
+          <FaChartBar /> <span>PlayerStats</span>
         </NavLink>
-      </nav>
+        <NavLink to="/TeamStats">
+          <FaCalendarAlt /> <span>TeamStats</span>
+        </NavLink>
+      </nav> */}
     </header>
   );
 };
