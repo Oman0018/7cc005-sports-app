@@ -1,8 +1,14 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Match List header on /admin/list route', () => {
+  // Simulate navigation to the route
+  window.history.pushState({}, 'Admin List', '/admin/list');
+
+  // Render App component (already includes routing)
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // Expect something specific from that route
+  expect(screen.getByText(/match list/i)).toBeInTheDocument();
 });
